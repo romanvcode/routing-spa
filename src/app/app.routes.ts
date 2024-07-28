@@ -1,9 +1,16 @@
 import { Routes } from '@angular/router';
-import { TaskComponent } from './tasks/task/task.component';
+
+import { TasksComponent } from './tasks/tasks.component';
+import { NoTaskComponent } from './tasks/no-task/no-task.component';
+import { UserTasksComponent } from './users/user-tasks/user-tasks.component';
 
 export const routes: Routes = [
   {
-    path: 'tasks', // <your-domain>/tasks
-    component: TaskComponent,
+    path: '', // <your-domain>/
+    component: NoTaskComponent,
+  },
+  {
+    path: 'users/:userId', // <your-domain>/users/1
+    component: UserTasksComponent,
   },
 ];
